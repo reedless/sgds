@@ -1,0 +1,62 @@
+---
+title: MAsthead with bootstrap
+layout: layout-test
+permalink: /bootstrap-sgds/masthead/
+---
+
+{% capture default_masthead %}
+<div class="sgds-masthead">
+    <a href="https://www.gov.sg" target="_blank">
+        <span class="sgds-icon sgds-icon-sg-crest"></span>
+        <span class="is-text">A Singapore Government Agency Website</span>
+    </a>
+</div>
+{% endcapture %}
+
+{% capture lang_selector_masthead %}
+<div class="sgds-masthead">
+    <!-- Use bootstrap container class -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-sm-12">
+                <a href="https://www.gov.sg" target="_blank">
+                    <span class="sgds-icon sgds-icon-sg-crest"></span>
+                    <span class="is-text">A Singapore Government Agency Website</span>
+                </a>
+            </div>
+            <!-- Replace .has-text-right to text-right for bootstrap -->
+            <!-- Replace .is-hidden-mobile to d-none d-md-none for tablet and below -->
+            <div class="col text-right d-none d-md-block">
+                <select class="language-selector" aria-label="language">
+                    <option>English</option>
+                    <option>中文</option>
+                    <option>Bahasa Melayu</option>
+                    <option>தமிழ்</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+
+<h3>
+    Default Masthead
+</h3>
+<div class="sgds-example-others">
+{{ default_masthead }}
+</div>
+{%- highlight html -%}{{default_masthead}}{%- endhighlight -%}
+<button class="sgds-button clipboard-btn is-primary is-outlined" data-clipboard-target=".highlight0">
+    Copy Snippet
+</button>
+<hr>
+<h3>
+    Masthead with language selector
+</h3>
+<div class="sgds-example-others">
+{{ lang_selector_masthead }}
+</div>
+{%- highlight html -%}{{lang_selector_masthead}}{%- endhighlight -%}
+<button class="sgds-button clipboard-btn is-primary is-outlined" data-clipboard-target=".highlight1">
+    Copy Snippet
+</button>

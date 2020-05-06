@@ -1,0 +1,83 @@
+---
+title: Sidenav with bootstrap
+layout: layout-test
+permalink: /bootstrap-sgds/side-nav/
+---
+
+{% capture lvl2_sidenav %}
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <aside class="sgds-menu">
+                <ul class="sgds-menu-list">
+                    <li><a class="is-active" href="#!">Level 2A</a></li>
+                    <li><a href="#!">Level 2B</a></li>
+                    <li><a href="#!">Level 2C</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% capture lvl2_dropdown_sidenav %}
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <aside class="sgds-menu">
+                <ul class="sgds-menu-list">
+                    <li class="second-level-nav">
+                        <a class="second-level-nav-header is-active">
+                            Level 2A
+                            <i class="sgds-icon sgds-icon-chevron-up" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <div class="second-level-nav-div">
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                    </div>
+                    <li><a href="#!">Level 2B</a></li>
+                    <li class="second-level-nav">
+                        <a class="second-level-nav-header">
+                            Level 2C
+                            <i class="sgds-icon sgds-icon-chevron-up" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <div class="second-level-nav-div">
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                        <li><a class="second-level-nav-item" href="#!">Level 3 item</a></li>
+                    </div>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+
+{% endcapture %}
+
+<h3>
+    Basic side navigation to support level 2 navigation
+</h3>
+<div class="sgds-example-others">
+{{ lvl2_sidenav }}
+</div>
+{%- highlight html -%}{{lvl2_sidenav}}{%- endhighlight -%}
+<button class="sgds-button clipboard-btn is-primary is-outlined" data-clipboard-target=".highlight0">
+    Copy Snippet
+</button>
+
+<hr>
+
+<h3>
+    Level 2 navigation dropdowns that show/hide level 3 navigation links 
+</h3>
+<div class="sgds-example-others">
+{{ lvl2_dropdown_sidenav }}
+</div>
+{%- highlight html -%}{{lvl2_dropdown_sidenav}}{%- endhighlight -%}
+<button class="sgds-button clipboard-btn is-primary is-outlined" data-clipboard-target=".highlight0">
+    Copy Snippet
+</button>
+
+<hr>
