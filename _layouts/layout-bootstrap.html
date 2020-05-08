@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/custom-css/standard-component.css">
+    <link rel="stylesheet" href="/assets/custom-css/main.css" />
+</head>
+<body>
+    <div class="sgds-masthead">
+        <a href="https://www.gov.sg" target="_blank">
+            <span class="sgds-icon sgds-icon-sg-crest"></span>
+            <span class="is-text">A Singapore Government Agency Website</span>
+        </a>
+    </div>
+    <div class="container-fluid">
+        <nav class="sgds-navbar" role="navigation">
+            <div class="sgds-navbar-brand">
+                <a class="sgds-navbar-item">
+                    <img src="https://placehold.it/200x80?text=logo" alt="Design System" />
+                </a>
+                <div class="sgds-navbar-burger" data-target="mainnav-1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="mainnav-1" class="sgds-navbar-menu">
+                <div class="sgds-navbar-start">
+                    <a class="sgds-navbar-item is-uppercase is-active is-tab">
+                        Who we are
+                    </a>
+                    <a class="sgds-navbar-item is-uppercase is-tab">
+                        Link 2
+                    </a>
+                    <a class="sgds-navbar-item is-uppercase is-tab">
+                        Link 3
+                    </a>
+                </div>
+                <div class="sgds-navbar-end">
+                    <a class="sgds-navbar-item is-uppercase is-tab">
+                        Link 4
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="row pt-4 pb-4" style='background-color:#6037b3;'>
+            <div class="col">
+                <h1 class="text-white pt-4 pb-4">{{page.title}}</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-2">
+                <aside class="sgds-menu">
+                    <ul class="sgds-menu-list">
+                        <li><a href="#!">Installation</a></li>
+                        <li><a href="#!">Masthead</a></li>
+                        <li><a href="#!">Main navigation</a></li>
+                        <li><a href="#!">Side Navigation</a></li>
+                        <li><a href="#!">Footer</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col col-offset-1">
+                {{content}}
+            </div>
+        </div>
+    </div>
+
+    <footer class='sgds-footer'>
+        <div class="top-section">
+            <div class="container-fluid">
+                <div class="row pb-4">
+                    <div class="col">
+                        <h5 class="text-white"><b>Singapore Government Design System</b></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <p class="text-white"><b>Category 1</b></p>
+                        <p><a href="">Link</a></p>
+                        <p><a href="">Link</a></p>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <p class="text-white"><b>Category 2</b></p>
+                        <p><a href="">Link</a></p>
+                        <p><a href="">Link</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-md-right">
+                        <ul>
+                            <li>
+                                <p><a href="" target="_blank">Contact</a></p>
+                            </li>
+                            <li>
+                                <p><a href="" target="_blank">Feedback</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <ul>
+                            <li>
+                                <a href="https://tech.gov.sg/report_vulnerability" target="_blank">Report Vulnerability</a>
+                            </li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 text-md-right">
+                        <p class="d-none d-md-block"> © 2020 Government of Singapore. Last Updated
+                            08 May 2020</p>
+                        <p class="d-md-none">© 2020 Government of Singapore</p>
+                        <p class="d-md-none last-updated">Last Updated 08 May 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>™
+    </footer>
+    
+    <!-- Make sure jQuery is loaded before sgds.js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- jsDelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/sgds-govtech@{{site.version}}/js/sgds.js"></script>
+</body>
+</html>
